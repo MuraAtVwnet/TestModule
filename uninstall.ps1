@@ -12,4 +12,11 @@ if( Test-Path $RemovePath ){
     Remove-Item $RemovePath -Force -Recurse
 }
 
+# オンラインインインストール対応
+$UnInstaller = "UnInstall" + $ModuleName + ".ps1"
+if( Test-Path ~/$UnInstaller ){
+    Remove-Item ~/$UnInstaller
+}
+
+
 

@@ -15,5 +15,5 @@ if( -not (Test-Path $NewPath)){
 # モジュールのコピー
 $ModuleFileName = Join-Path $PSScriptRoot ($ModuleName + ".psm1")
 
-copy $ModuleFileName $NewPath
+Copy-Item $ModuleFileName $NewPath
 
