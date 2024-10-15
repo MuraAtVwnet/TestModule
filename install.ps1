@@ -9,7 +9,7 @@ $NewPath = Join-Path $ModulePath $ModuleName
 
 # ディレクトリ作成
 if( -not (Test-Path $NewPath)){
-    md $NewPath
+	New-Item $NewPath -ItemType Directory
 }
 
 # モジュールのコピー
