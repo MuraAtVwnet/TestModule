@@ -18,5 +18,10 @@ if( Test-Path ~/$UnInstaller ){
     Remove-Item ~/$UnInstaller
 }
 
+# バージョン管理ファイル削除
+$Vertion = "Vertion" + $ModuleName + ".txt"
+if( Test-Path ~/$Vertion ){
+    Remove-Item ~/$Vertion
+}
 
 
