@@ -2,6 +2,7 @@
 # リポジトリ名とモジュール名は同一名にしている前提
 # インストーラーは install.ps1 にしている前提
 # アンインストーラーは uninstall.ps1 にしている前提
+# バージョンファイルは Vertion.txt にしている前提
 
 $ModuleName = "TestModule"
 $GitHubName = "MuraAtVwnet"
