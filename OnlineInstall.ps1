@@ -9,6 +9,7 @@ $GitHubName = "MuraAtVwnet"
 $Module = $ModuleName + ".psm1"
 $Installer = "Install" + $ModuleName + ".ps1"
 $UnInstaller = "UnInstall" + $ModuleName + ".ps1"
+$Vertion = "Vertion" + $ModuleName + ".txt"
 
 # ダウンロード
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/$GitHubName/$ModuleName/master/$Module -OutFile ~/$Module

@@ -2,8 +2,9 @@
 
 	# バージョンチェックとオンライン更新
 	if( $VertionCheck ){
-		$ModuleName = "<モジュール名>"
-		$GitHubName = "<GitHub名>"
+		$ModuleName = "TestModule"
+		$GitHubName = "MuraAtVwnet"
+
 		$Module = $ModuleName + ".psm1"
 		$Installer = "Install" + $ModuleName + ".ps1"
 		$UnInstaller = "UnInstall" + $ModuleName + ".ps1"
