@@ -20,7 +20,7 @@ Copy-Item $ModuleFileName $NewPath
 $Vertion = "Vertion" + $ModuleName + ".txt"
 $VertionFileName = Join-Path $PSScriptRoot "Vertion.txt"
 
-# オンラインインストール時のバージョンファイル
+# ローカルインストール時のバージョンファイル
 if( Test-Path $VertionFileName ){
 	Copy-Item $VertionFileName ~/$Vertion
 }
