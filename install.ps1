@@ -21,9 +21,8 @@ $Vertion = "Vertion" + $ModuleName + ".txt"
 $VertionFileName = Join-Path $PSScriptRoot "Vertion.txt"
 
 # オンラインインストール時のバージョンファイル
-if( -not (Test-Path $VertionFileName) ){
-	$VertionFileName = Join-Path $PSScriptRoot $Vertion
+if( Test-Path $VertionFileName ){
+	Copy-Item $VertionFileName ~/$Vertion
 }
 
-Copy-Item $VertionFileName ~/$Vertion
 
