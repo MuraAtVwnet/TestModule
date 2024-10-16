@@ -2,7 +2,6 @@
 # リポジトリ名とモジュール名は同一名にしている前提
 # インストーラーは install.ps1 にしている前提
 # アンインストーラーは uninstall.ps1 にしている前提
-# バージョンファイルは Vertion.txt にしている前提
 
 $ModuleName = "TestModule"
 $GitHubName = "MuraAtVwnet"
@@ -10,13 +9,11 @@ $GitHubName = "MuraAtVwnet"
 $Module = $ModuleName + ".psm1"
 $Installer = "Install" + $ModuleName + ".ps1"
 $UnInstaller = "UnInstall" + $ModuleName + ".ps1"
-$Vertion = "Vertion" + $ModuleName + ".txt"
 
 # ダウンロード
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/$GitHubName/$ModuleName/master/$Module -OutFile ~/$Module
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/$GitHubName/$ModuleName/master/install.ps1 -OutFile ~/$Installer
 Invoke-WebRequest -Uri https://raw.githubusercontent.com/$GitHubName/$ModuleName/master/uninstall.ps1 -OutFile ~/$UnInstaller
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/$GitHubName/$ModuleName/master/Vertion.txt -OutFile ~/$Vertion
 
 # インストーラー実行
 & ~/$Installer
