@@ -6,8 +6,6 @@
 		$GitHubName = "MuraAtVwnet"
 
 		$Module = $ModuleName + ".psm1"
-		$Installer = "Install" + $ModuleName + ".ps1"
-		$UnInstaller = "UnInstall" + $ModuleName + ".ps1"
 		$Vertion = "Vertion" + $ModuleName + ".txt"
 		$VertionTemp = "VertionTemp" + $ModuleName + ".tmp"
 
@@ -34,18 +32,8 @@
 		if( $Update ){
 			Write-Output "最新版に更新します"
 			Write-Output "更新完了後、PowerShell プロンプトを開きなおしてください"
-#			Invoke-WebRequest -Uri https://raw.githubusercontent.com/$GitHubName/$ModuleName/master/$Module -OutFile ~/$Module
-#			Invoke-WebRequest -Uri https://raw.githubusercontent.com/$GitHubName/$ModuleName/master/install.ps1 -OutFile ~/$Installer
-#			Invoke-WebRequest -Uri https://raw.githubusercontent.com/$GitHubName/$ModuleName/master/uninstall.ps1 -OutFile ~/$UnInstaller
-#			Invoke-WebRequest -Uri https://raw.githubusercontent.com/$GitHubName/$ModuleName/master/Vertion.txt -OutFile ~/$Vertion
-#			& ~/$Installer
-#			Remove-Item ~/$Module
-#			Remove-Item ~/$Installer
-
 			Invoke-WebRequest -Uri https://raw.githubusercontent.com/$GitHubName/$ModuleName/master/OnlineInstall.ps1 -OutFile ~/OnlineInstall.ps1
 			& ~/OnlineInstall.ps1
-
-
 			Write-Output "更新完了"
 			Write-Output "PowerShell プロンプトを開きなおしてください"
 		}
