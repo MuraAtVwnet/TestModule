@@ -43,7 +43,7 @@
 		return
 	}
 
-	# 本来の処理
+	############ 本来の処理
 	$Now = (Get-Date).ToString()
 	$EchoString = "現在時刻は " + $Now + " です"
 	Write-Output $EchoString
