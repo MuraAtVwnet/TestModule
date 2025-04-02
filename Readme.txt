@@ -12,3 +12,9 @@ Invoke-WebRequest -Uri https://raw.githubusercontent.com/$GitHubName/$ModuleName
 作成した PowerShell 関数のモジュール化とオンラインインストール/オンライン更新の実装
 https://www.vwnet.jp/Windows/PowerShell/2024101501/PowerShellModuleOnlineInstallUpdate.htm
 #>
+
+<#
+Uninstall 方法
+& ~/UnInstallTestModule.ps1
+#>
+
